@@ -1,0 +1,58 @@
+# AI Conversational PDF Processing System
+
+## Project Structure
+
+```
+ai_pdf_processor/
+├── config/
+│   └── config.py                  # Configuration settings
+├── data/
+│   ├── processed/                 # Processed documents
+│   └── raw/                       # Raw PDFs
+├── models/
+│   └── embeddings/                # Pre-trained embedding models
+├── src/
+│   ├── pdf_processor/
+│   │   ├── __init__.py
+│   │   ├── extractor.py           # Text extraction from PDFs
+│   │   └── ocr.py                 # OCR processing
+│   ├── text_analyzer/
+│   │   ├── __init__.py
+│   │   ├── chunker.py             # Text chunking
+│   │   ├── embedder.py            # Text embedding
+│   │   └── keyword_extractor.py   # Keyword extraction
+│   ├── model_manager/
+│   │   ├── __init__.py
+│   │   ├── qa_model.py            # Question-answering functionality
+│   │   ├── rag_model.py           # RAG implementation
+│   │   └── summarizer.py          # Text summarization
+│   ├── document_store/
+│   │   ├── __init__.py
+│   │   ├── document_db.py         # Document storage
+│   │   └── vector_db.py           # Vector database interface
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── app.py                 # FastAPI application
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── chat.py            # Chat endpoints
+│   │   │   ├── documents.py       # Document endpoints
+│   │   │   └── search.py          # Search endpoints
+│   │   └── schemas/
+│   │       ├── __init__.py
+│   │       ├── chat.py            # Chat schemas
+│   │       ├── documents.py       # Document schemas
+│   │       └── search.py          # Search schemas
+│   └── utils/
+│       ├── __init__.py
+│       └── helper.py              # Helper functions
+├── tests/
+│   ├── test_pdf_processor.py
+│   ├── test_text_analyzer.py
+│   ├── test_model_manager.py
+│   ├── test_document_store.py
+│   └── test_api.py
+├── main.py                        # Main application entry point
+├── requirements.txt               # Project dependencies
+└── README.md                      # Project documentation
+```
